@@ -25,6 +25,7 @@
     "tamagui": "^1.116.14",
     "vercel": "latest"
   },
+  "packageManager": "yarn@4.5.0",
   "devDependencies": {
     "@tamagui/next-plugin": "^1.116.14",
     "@types/node": "^20.14.1",
