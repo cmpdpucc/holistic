@@ -17,15 +17,9 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
   return (
     <>
       <Head>
-        <title>Tamagui • Pages Router</title>
-        <meta
-          name="description"
-          content="Tamagui, Solito, Expo & Next.js"
-        />
-        <link
-          rel="icon"
-          href="/favicon.ico"
-        />
+        <title>Holistic Couching</title>
+        <meta name="description" content="FInd your best way of living" />
+        <link rel="icon" href="/favicon.ico" />
         <script
           dangerouslySetInnerHTML={{
             // avoid flash of animated things on enter:
@@ -51,11 +45,7 @@ function ThemeProvider({ children }: { children: React.ReactNode }) {
         setTheme(next as any)
       }}
     >
-      <Provider
-        disableRootThemeClass
-        disableInjectCSS
-        defaultTheme={theme}
-      >
+      <Provider disableRootThemeClass disableInjectCSS defaultTheme={theme}>
         {children}
       </Provider>
     </NextThemeProvider>

@@ -16,14 +16,11 @@ export const NativeToast = () => {
       enterStyle={{ opacity: 0, scale: 0.5, y: -25 }}
       exitStyle={{ opacity: 0, scale: 1, y: -20 }}
       y={0}
-      opacity={1}
+      opacity={0.85}
       scale={1}
-      animation="quick"
+      animation="tooltip"
     >
-      <YStack
-        py="$1.5"
-        px="$2"
-      >
+      <YStack py="$1.5" px="$2">
         <Toast.Title lh="$1">{currentToast.title}</Toast.Title>
         {!!currentToast.message && <Toast.Description>{currentToast.message}</Toast.Description>}
       </YStack>

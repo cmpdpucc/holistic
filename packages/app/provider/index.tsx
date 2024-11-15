@@ -19,9 +19,9 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
       {...rest}
     >
       <ToastProvider
-        swipeDirection="horizontal"
-        duration={6000}
-        native={isWeb ? [] : ['mobile']}
+        swipeDirection={isWeb ? 'horizontal' : 'up'}
+        duration={5000}
+        native={isWeb ? [] : ['web']}
       >
         {children}
         <CustomToast />
