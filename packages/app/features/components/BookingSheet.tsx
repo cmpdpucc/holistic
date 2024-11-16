@@ -28,9 +28,9 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
       dismissOnSnapToBottom
     >
       <Sheet.Overlay animation="lazy" enterStyle={{ opacity: 0 }} exitStyle={{ opacity: 0 }} />
-      <Sheet.Frame p="$4" space="$4" bg="$background">
+      <Sheet.Frame p="$4" gap="$4" bg="$background">
         <YStack space="$3">
-          <XStack ai="center" space="$2">
+          <XStack ai="center" gap="$2">
             <User />
             <Input
               flex={1}

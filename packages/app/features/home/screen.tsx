@@ -49,7 +49,7 @@ export function HomeScreen() {
         </YStack>
 
         {/* Booking CTA */}
-        <YStack ai="center" space="$4" py="$6">
+        <YStack ai="center" gap="$4" py="$6">
           <Button size="$6" theme="active" onPress={() => setOpenBooking(true)}>
             Book Your Session
           </Button>
