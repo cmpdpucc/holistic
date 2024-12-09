@@ -40,4 +40,18 @@ export const animations = createAnimations({
     stiffness: 80, // Lower stiffness for slower movement
     duration: 400, // Longer duration for slower animation
   },
+  slideIn: {
+    type: 'spring',
+    damping: 20,
+    mass: 1.2,
+    stiffness: 250,
+    enterStyle: {
+      x: 50,
+      opacity: 0,
+    },
+    exitStyle: {
+      x: 50,
+      opacity: 0,
+    },
+  },
 })

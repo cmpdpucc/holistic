@@ -80,7 +80,7 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
             />
           </XStack>
 
-          <Button theme="active" onPress={onSubmit} mt="$4">
+          <Button borderColor="$borderColor" onPress={onSubmit} mt="$4">
             Submit Booking Request
           </Button>
         </YStack>

@@ -37,20 +37,20 @@ export function HomeScreen() {
         <Header />
 
         {/* Services Cards */}
-        <YStack space="$4" pb="$6">
-          <H2 ta="left" col="$color11">
-            Our Services
-          </H2>
-          <XStack flexWrap="wrap" gap="$4" jc="center">
-            {services.map((service) => (
-              <ServiceCard key={service.title} {...service} />
-            ))}
-          </XStack>
+        <YStack gap="$4" pb="$6">
+          <H2 ta="left">Our Services</H2>
+          <YStack gap="$4" bg="$backgroundFocus" padding="$5" display="flex" borderRadius="$4">
+            <XStack flexWrap="wrap" gap="$4" jc="center">
+              {services.map((service) => (
+                <ServiceCard key={service.title} {...service} />
+              ))}
+            </XStack>
+          </YStack>
         </YStack>
 
         {/* Booking CTA */}
         <YStack ai="center" gap="$4" py="$6">
-          <Button size="$6" theme="active" onPress={() => setOpenBooking(true)}>
+          <Button size="$6" bg="$backgroundStrong" onPress={() => setOpenBooking(true)}>
             Book Your Session
           </Button>
         </YStack>

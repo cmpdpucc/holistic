@@ -12,16 +12,15 @@ export function ServiceCard({ title, description, price }: Service) {
       hoverStyle={{ scale: 0.925 }}
       pressStyle={{ scale: 0.875 }}
       animation="bouncy"
+      backgroundColor="$backgroundStrong"
     >
       <Card.Header p="$4">
         <H2 size="$6">{title}</H2>
       </Card.Header>
       <Card.Footer p="$4">
         <YStack space="$2">
-          <Paragraph size="$3" col="$color10">
-            {description}
-          </Paragraph>
-          <Paragraph size="$4" col="$color12">
+          <Paragraph size="$3">{description}</Paragraph>
+          <Paragraph size="$4" col="$color">
             {price}
           </Paragraph>
         </YStack>
