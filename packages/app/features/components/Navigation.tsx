@@ -46,38 +46,27 @@ export function Navigation() {
       w="100%"
       t="$-4"
       gap="$4"
-      jc="center"
+      jc="flex-end"
       fw="wrap"
       $sm={{ pos: 'relative', t: 0 }}
     >
       {isWeb ? (
         <>
-          {/* <XStack bg="$backgroundFocus" padding="$4" gap="$4">
-            <SwitchRouterButton />
-            <SwitchThemeButton />
-            <XStack gap="$4" alignItems="center">
-              {MENU_ITEMS.map((item) => (
-                <NavLink key={item.href} {...item} />
-              ))}
-            </XStack>
-          </XStack> */}
-
           <XStack
             bg="$backgroundFocus"
             padding="$4"
             gap="$4"
             alignItems="center"
-            justifyContent="space-around"
+            justifyContent="center"
             width="120%"
           >
             {/* Left-aligned items */}
             <XStack gap="$4" alignItems="flex-start">
               <SwitchRouterButton />
-
               <SwitchThemeButton />
             </XStack>
             {/* Right-aligned items */}
-            <XStack alignItems="center" gap="$4">
+            <XStack ai="flex-start" gap="$4">
               {MENU_ITEMS.map((item) => (
                 <NavLink key={item.href} {...item} />
               ))}
@@ -87,17 +76,19 @@ export function Navigation() {
         </>
       ) : (
         <>
-          <Button icon={Menu} onPress={() => setOpen(true)} transparent />
-          <Sheet modal open={open} onOpenChange={setOpen} snapPoints={[80]} dismissOnSnapToBottom>
-            <Sheet.Overlay />
-            <Sheet.Frame padding="$1">
-              <YStack gap="$2.5">
-                {MENU_ITEMS.map((item) => (
-                  <NavLink key={item.href} {...item} onPress={() => setOpen(false)} />
-                ))}
-              </YStack>
-            </Sheet.Frame>
-          </Sheet>
+          <XStack position="absolute">
+            <Button scaleIcon={2} icon={Menu} onPress={() => setOpen(true)} transparent />
+            <Sheet modal open={open} onOpenChange={setOpen} snapPoints={[80]} dismissOnSnapToBottom>
+              <Sheet.Overlay />
+              <Sheet.Frame padding="$1">
+                <YStack gap="$2.5">
+                  {MENU_ITEMS.map((item) => (
+                    <NavLink key={item.href} {...item} onPress={() => setOpen(false)} />
+                  ))}
+                </YStack>
+              </Sheet.Frame>
+            </Sheet>
+          </XStack>
         </>
       )}
     </XStack>
