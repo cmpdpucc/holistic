@@ -20,7 +20,7 @@
 
 // packages/app/features/components/Layout.tsx
 import { YStack } from '@my/ui'
-import { Navbar } from './Navbar'
+import { Navbar } from '../NavBar'
 
 interface LayoutProps {
   children: React.ReactNode

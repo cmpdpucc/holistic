@@ -33,7 +33,6 @@ export function HomeScreen() {
   return (
     <ScrollView>
       <YStack f={1} p="$6" space="$6" bg="$background">
-        <Navigation />
         <Header />
 
         {/* Services Cards */}

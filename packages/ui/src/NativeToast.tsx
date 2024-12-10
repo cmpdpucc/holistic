@@ -191,6 +191,15 @@ export const NativeToast = () => {
       viewportName={currentToast.viewportName}
       animation="slowAnimation"
       {...currentPosition}
+      backgroundColor={'$brandBackground'}
+      top={0}
+      margin={'auto'}
+      left={0}
+      right={0}
+      shadowOffset={{ width: 0, height: 2 }}
+      shadowOpacity={0.45}
+      shadowRadius={'$4'}
+      elevation={'$4'}
       enterStyle={{
         opacity: 0.8,
         scale: 0.8,
@@ -203,23 +212,14 @@ export const NativeToast = () => {
         y: -100,
         rotate: '3deg',
       }}
-      style={{
-        //position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        margin: 'auto',
-        //backgroundColor: 'black', // Override background color
-        // borderTopLeftRadius: 0,
-        // borderTopRightRadius: 0,
-        // borderRadius: 8, // Override border radius
-
-        //shadowColor: 'rgba(0, 0, 0, 0.5)', // Override shadow
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.6,
-        shadowRadius: 4,
-        elevation: 5,
-      }}
+      style={
+        {
+          // borderTopLeftRadius: 0,
+          // borderTopRightRadius: 0,
+          // borderRadius: 8, // Override border radius
+          //shadowColor: 'rgba(0, 0, 0, 0.5)', // Override shadow
+        }
+      }
     >
       <YStack py="$1.5" px="$2">
         <Toast.Title lh="$1" fontWeight="bold">
