@@ -1,7 +1,8 @@
 import { Stack } from 'expo-router'
-import { Text } from '@my/ui'
 
-export default function Services() {
+import { ServicesScreen } from 'app/features/Services'
+
+export default function Screen() {
   return (
     <>
       <Stack.Screen
@@ -10,7 +11,8 @@ export default function Services() {
           headerShown: false,
         }}
       />
-      <Text>Services</Text>
+
+      <ServicesScreen />
     </>
   )
 }

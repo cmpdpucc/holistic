@@ -27,10 +27,14 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
       snapPoints={[80]}
       dismissOnSnapToBottom
     >
-      <Sheet.Overlay animation="lazy" enterStyle={{ opacity: 0 }} exitStyle={{ opacity: 0 }} />
-      <Sheet.Frame p="$4" gap="$4" bg="$background">
-        <YStack space="$3">
-          <XStack ai="center" gap="$2">
+      <Sheet.Overlay
+        animation="slowAnimation"
+        enterStyle={{ opacity: 0 }}
+        exitStyle={{ opacity: 0 }}
+      />
+      <Sheet.Frame p="$4" gap="$2" bg="$background">
+        <YStack gap="$3" jc="center" ai="center">
+          <XStack ai="center" gap="$1">
             <User />
             <Input
               flex={1}
@@ -40,7 +44,7 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
             />
           </XStack>
 
-          <XStack ai="center" space="$2">
+          <XStack ai="center" gap="$1">
             <Mail />
             <Input
               flex={1}
@@ -50,7 +54,7 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
             />
           </XStack>
 
-          <XStack ai="center" space="$2">
+          <XStack ai="center" gap="$1">
             <Phone />
             <Input
               flex={1}
@@ -60,7 +64,7 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
             />
           </XStack>
 
-          <XStack ai="center" space="$2">
+          <XStack ai="center" gap="$1">
             <Calendar />
             <Input
               flex={1}
@@ -70,7 +74,7 @@ export function BookingSheet({ open, onOpenChange, onSubmit }: BookingSheetProps
             />
           </XStack>
 
-          <XStack ai="center" space="$2">
+          <XStack ai="center" gap="$1">
             <Clock />
             <Input
               flex={1}

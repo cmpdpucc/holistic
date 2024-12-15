@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { Text } from '@my/ui'
+
+import { ServicesScreen } from 'app/features/Services'
 
 export default function Page() {
   return (
@@ -7,9 +8,7 @@ export default function Page() {
       <Head>
         <title>Services</title>
       </Head>
-      <Text fontSize="$6" fontWeight="bold">
-        Services
-      </Text>
+      <ServicesScreen />
     </>
   )
 }

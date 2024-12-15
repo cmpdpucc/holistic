@@ -2,7 +2,6 @@ import { ScrollView, YStack, Button, H2, XStack } from '@my/ui'
 import { useState } from 'react'
 import { useToastController } from '@my/ui'
 import { Header } from '../components/Header'
-import { Navigation } from '../components/Navigation'
 import { ServiceCard } from '../components/ServiceCard'
 import { BookingSheet } from '../components/BookingSheet'
 import { Service } from '../../constants/types'
@@ -32,7 +31,7 @@ export function HomeScreen() {
 
   return (
     <ScrollView>
-      <YStack f={1} p="$6" space="$6" bg="$background">
+      <YStack f={1} p="$6" gap="$6" bg="$background" pt="$10">
         <Header />
 
         {/* Services Cards */}

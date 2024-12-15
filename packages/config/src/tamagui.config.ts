@@ -248,6 +248,8 @@ const light = {
   placeholderColor: '#9973E6',
   outlineColor: '#A983EE',
 
+  shadowColor: 'rgba(74, 43, 130, 0.15)',
+
   brandBackground: '#8B63DA',
   brandColor: '#FFFFFF',
   accentColor: '#FFD700',
@@ -274,6 +276,8 @@ const dark = {
 
   placeholderColor: '#6B43BA',
   outlineColor: '#5B33AA',
+
+  shadowColor: 'rgba(139, 99, 218, 0.25)',
 
   brandBackground: '#8B63DA',
   brandColor: '#FFFFFF',
