@@ -1,4 +1,4 @@
-import { ScrollView, YStack, Button, H2, XStack } from '@my/ui'
+import { ScrollView, YStack, Button, H2, XStack, isWeb } from '@my/ui'
 import { useState } from 'react'
 import { useToastController } from '@my/ui'
 import { Header } from '../components/Header'
@@ -31,7 +31,7 @@ export function HomeScreen() {
 
   return (
     <ScrollView>
-      <YStack f={1} p="$6" gap="$6" bg="$background" pt="$10">
+      <YStack f={1} p="$6" gap="$6" bg="$background" {...(isWeb ? { pt: '$10' } : { pb: '$10' })}>
         <Header />
 
         {/* Services Cards */}

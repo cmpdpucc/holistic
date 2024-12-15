@@ -27,10 +27,8 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
       >
         <Navbar />
 
-        {/* <YStack flex={1} py="$12" bg="$background">
-          {children}
-        </YStack> */}
         {children}
+
         <CustomToast />
         <ToastViewport />
       </ToastProvider>

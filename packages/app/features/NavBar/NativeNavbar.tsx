@@ -7,7 +7,7 @@ export function NativeNavbar() {
   return (
     <XStack
       padding={-10}
-      zIndex={1}
+      zIndex={1000}
       position="absolute"
       bottom="$4"
       left="$5"
