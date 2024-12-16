@@ -9,7 +9,7 @@ import {
   YStack,
 } from '@my/ui'
 import { ToastViewport } from './ToastViewport'
-import { Navbar } from '../features/NavBar'
+import { Navbar } from 'app/features/NavBar'
 
 export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
   const colorScheme = useColorScheme()
