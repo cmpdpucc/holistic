@@ -6,13 +6,17 @@ import {
   ToastProvider,
   config,
   isWeb,
-  YStack,
+  AnimatePresence,
 } from '@my/ui'
 import { ToastViewport } from './ToastViewport'
 import { Navbar } from 'app/features/NavBar'
+import { AnimatedNavbar } from 'app/features/NavBar/AnimatedNavbar'
+
+import { useMediaLoading } from './useMediaLoading'
 
 export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
   const colorScheme = useColorScheme()
+  const { isMediaLoaded } = useMediaLoading()
 
   return (
     <TamaguiProvider
@@ -25,7 +29,15 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
         duration={3500}
         native={isWeb ? [] : ['web']}
       >
-        <Navbar />
+        <AnimatePresence>
+          {console.log('N1 isMediaLoaded', isMediaLoaded)}
+          {isMediaLoaded && (
+            <AnimatedNavbar>
+              {console.log('N2 isMediaLoaded', isMediaLoaded)}
+              <Navbar />
+            </AnimatedNavbar>
+          )}
+        </AnimatePresence>
 
         {children}
 

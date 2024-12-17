@@ -15,7 +15,7 @@ export function NativeNavbar() {
       bg="$backgroundFocus"
       borderWidth={1}
       borderColor="$borderColor"
-      borderRadius="$10"
+      borderRadius="$0"
       jc="space-between"
       ai="center"
       h="$6"

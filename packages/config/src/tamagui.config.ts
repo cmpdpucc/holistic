@@ -154,33 +154,32 @@ import { createMedia } from '@tamagui/react-native-media-driver'
 import { animations } from '@my/ui/src/animations'
 
 // Add responsive size tokens
-const size = {
-  0: 0,
-  1: 4,
-  2: 8,
-  3: 16,
-  4: 24,
-  5: 32,
-  6: 40,
-  7: 48,
-  8: 56,
-  9: 64,
-  10: 72, // Add responsive sizes
-  sm: 300,
-  md: 500,
-  lg: 700,
-  true: 44, // default size
-}
+// const size = {
+//   0: 0,
+//   1: 4,
+//   2: 8,
+//   3: 16,
+//   4: 24,
+//   5: 32,
+//   6: 40,
+//   7: 48,
+//   8: 56,
+//   9: 64,
+//   10: 72, // Add responsive sizes
+//   sm: 300,
+//   md: 500,
+//   lg: 700,
+//   true: 44, // default size
+// }
 
-const space = {
-  ...size,
-  '-1': -4,
-  '-2': -8,
-  '-3': -16,
-  '-4': -24,
-  '-5': -32,
-  '-6': -40,
-}
+// const space = {
+//   '-1': -4,
+//   '-2': -8,
+//   '-3': -16,
+//   '-4': -24,
+//   '-5': -32,
+//   '-6': -40,
+// }
 
 const headingFont = createInterFont({
   size: {
@@ -306,11 +305,8 @@ export const config = createTamagui({
     allowedStyleValues: 'somewhat-strict',
   },
   themes,
-  tokens: {
-    ...tokens,
-    size,
-    space,
-  },
+  tokens,
+
   media: createMedia({
     xs: { maxWidth: 660 },
     sm: { maxWidth: 800 },

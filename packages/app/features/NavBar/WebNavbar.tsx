@@ -49,6 +49,7 @@
 //   )
 // }
 
+'use client'
 import { XStack, Text, YStack, Button, useMedia } from 'tamagui'
 import { useState } from 'react'
 import { TAB_ITEMS } from '../../constants/tabs'
