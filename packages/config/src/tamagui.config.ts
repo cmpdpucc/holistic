@@ -318,6 +318,9 @@ export const config = createTamagui({
     lg: { maxWidth: 1280 },
     xl: { maxWidth: 1420 },
     xxl: { maxWidth: 1600 },
+
+    webNav: { minWidth: 915 },
+
     gtXs: { minWidth: 660 + 1 },
     gtSm: { minWidth: 800 + 1 },
     gtMd: { minWidth: 1020 + 1 },
