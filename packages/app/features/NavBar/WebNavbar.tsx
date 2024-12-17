@@ -60,7 +60,7 @@ export function WebNavbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const media = useMedia() // Tamagui's media query hook
 
-  const isLargeScreen = media.webNav // Adjust based on your breakpoints
+  const isSmallScreen = media.md // Adjust based on your breakpoints
 
   return (
     <YStack
@@ -93,48 +93,46 @@ export function WebNavbar() {
         width={'80%'}
         h="70%"
       >
-        <Text pl="$6" pr="$4" fontSize="$6" fontWeight="bold">
+        <Text pl="$6" fontSize="$6" fontWeight="bold">
           MYLOGO
         </Text>
-        <XStack jc="center" ai="center" position="relative">
+        <XStack jc="center" ai="center">
           {/* Render buttons or a menu icon based on screen size */}
-          {!isLargeScreen ? (
-            <Button
-              bg="$backgroundFocus"
-              borderRadius="$10"
-              p="$1"
-              w="$8"
-              onPress={() => setMenuOpen(!menuOpen)}
-            >
+          {isSmallScreen ? (
+            <Button bg="$backgroundFocus" borderRadius="$10" onPress={() => setMenuOpen(!menuOpen)}>
+              {/* Dots icon */}
               <Menu />
             </Button>
           ) : (
-            <XStack gap="$1">
+            <XStack gap="$4" pr="$6">
               {TAB_ITEMS.map((item) => (
-                <NavLink key={item.href} {...item} closeMenu={() => setMenuOpen(false)} />
+                <NavLink key={item.href} {...item} />
               ))}
             </XStack>
           )}
-          <Text pr="$6" pl="$4">
+          <Text style={{ marginLeft: 'auto' }} bg="$accentColor">
             USER LOGO
           </Text>
         </XStack>
       </XStack>
 
       {/* Dropdown menu for small screens */}
-      {menuOpen && !isLargeScreen && (
+      {menuOpen && isSmallScreen && (
         <YStack
           bg="$backgroundFocus"
           borderWidth="$1"
           borderColor="$borderColor"
           borderRadius="$4"
-          p="$2"
-          mt="$4"
+          p="$4"
+          mt="$2"
           width="80%"
         >
           {TAB_ITEMS.map((item) => (
-            <NavLink key={item.href} {...item} closeMenu={() => setMenuOpen(false)} />
+            <NavLink key={item.href} {...item} />
           ))}
+          <Text bg="$accentColor" mt="$2">
+            USER LOGO
+          </Text>
         </YStack>
       )}
     </YStack>
