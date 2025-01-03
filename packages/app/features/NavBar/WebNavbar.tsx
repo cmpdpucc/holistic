@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { TAB_ITEMS } from '../../constants/tabs'
 import { NavLink } from './NavLink'
 
+import { AuthButton } from 'app/features/components/auth/AuthButton'
+
 import { Menu } from '@tamagui/lucide-icons'
 
 export function WebNavbar() {
@@ -64,9 +66,7 @@ export function WebNavbar() {
               ))}
             </XStack>
           )}
-          <Text pr="$6" pl="$4">
-            USER LOGO
-          </Text>
+          <AuthButton />
         </XStack>
       </XStack>
 

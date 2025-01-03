@@ -1,16 +1,4 @@
 {
-  "explorer.fileNesting.enabled": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -20,9 +8,51 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.workingDirectories": [{ "mode": "auto" }],
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "[typescript]": {
+    "editor.defaultFormatter": "denoland.vscode-deno"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "deno.enable": true,
+  "deno.enablePaths": [
+    "supabase/functions"
+  ],
+  "deno.importMap": "./supabase/functions/import_map.json",
+  "deno.lint": true,
+  "deno.unstable": [
+    "bare-node-builtins",
+    "byonm",
+    "sloppy-imports",
+    "unsafe-proto",
+    "webgpu",
+    "broadcast-channel",
+    "worker-options",
+    "cron",
+    "kv",
+    "ffi",
+    "fs",
+    "http",
+    "net"
+  ],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always"
   },
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "explorer.fileNesting.enabled": true,
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
