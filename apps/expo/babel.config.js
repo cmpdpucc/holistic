@@ -11,7 +11,7 @@ module.exports = (api) => {
             // define aliases to shorten the import paths
             app: '../../packages/app',
             '@my/ui': '../../packages/ui',
-            '@my/db': '../../packages/db',
+            api: '../../packages/api',
           },
           extensions: ['.js', '.jsx', '.tsx', '.ios.js', '.android.js'],
         },

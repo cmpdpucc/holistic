@@ -11,6 +11,8 @@ import {
 import { ToastViewport } from './ToastViewport'
 import { Navbar } from '../features/NavBar'
 
+import { AuthProvider } from 'api/src/auth/AuthContext'
+
 export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'config'>) {
   const colorScheme = useColorScheme()
 
@@ -25,12 +27,14 @@ export function Provider({ children, ...rest }: Omit<TamaguiProviderProps, 'conf
         duration={3500}
         native={isWeb ? [] : ['web']}
       >
+        <AuthProvider>
         <Navbar />
 
         {children}
 
         <CustomToast />
         <ToastViewport />
+        </AuthProvider>
       </ToastProvider>
     </TamaguiProvider>
   )
